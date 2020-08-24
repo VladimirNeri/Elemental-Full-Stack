@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import data from '../../data/blogposts/08062020';
 import { Pagstyl } from './blog.style';

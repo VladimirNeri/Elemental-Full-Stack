@@ -1,4 +1,7 @@
+/* eslint-disable no-undef */
+// eslint-disable-next-line no-undef
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+// eslint-disable-next-line no-undef
 const path = require('path');
 
 
@@ -9,6 +12,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+  devtool: 'eval-source-map',
   entry: './src/index.js',
   output: {
     // NEW
