@@ -1,6 +1,9 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const path = require('path');
+
+
 const htmlPlugin = new HtmlWebPackPlugin({
+  favicon: './public/favicon.ico',
   template: './public/index.html',
   filename: './index.html',
 });
@@ -9,8 +12,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     // NEW
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
   }, // NEW Ends
   plugins: [htmlPlugin],
   module: {
@@ -25,6 +28,21 @@ module.exports = {
       {
         test: /\.s?css$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.md$/i,
+        use: 'raw-loader',
+      },
+      {
+        test: /\.(png|jpg|gif|svg|ico)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+            }
+          },
+        ],
       }
     ],
   },
