@@ -4,7 +4,6 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 // eslint-disable-next-line no-undef
 const path = require('path');
 
-
 const htmlPlugin = new HtmlWebPackPlugin({
   favicon: './public/favicon.ico',
   template: './public/index.html',

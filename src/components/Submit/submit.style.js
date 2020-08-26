@@ -12,9 +12,8 @@ export const Submitstyle = styled.div`
     margin-top: 1em; 
     margin-bottom: 1em; 
     display: block; 
-    width: 35%;
+    width: 70%;
     margin-left: auto; 
     margin-right: auto; 
   }
-
 `

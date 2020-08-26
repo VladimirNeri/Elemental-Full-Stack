@@ -9,6 +9,7 @@ import Blog from './views/blog';
 import Submit from './views/submit';
 import Signpage from './views/signup';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 const Index = () => {

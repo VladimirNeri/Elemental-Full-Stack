@@ -19,11 +19,6 @@ function Navbar() {
             </Link>
           ))}
       </h1>
-
-      <div className="searchbar">
-        <label htmlFor="search"></label>
-        <input type="text" placeholder="search" />
-      </div>
       
       <div className="links">
         <ul>

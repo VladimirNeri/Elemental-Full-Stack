@@ -19,7 +19,7 @@ const data = [
   {
     path: '/signup',
     label: 'SignUp'
-  }
+  },
 ];
 
 export default data; 

@@ -1,9 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import data from '../../data/blogposts/08062020';
 import { Pagstyl } from './blog.style';
 
 const Fall = () => {
   let pagData = data.filter((data) => data.title === 'Fall');
+
   return (
     <Pagstyl>
       {pagData.map((post) => (
