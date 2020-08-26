@@ -80,4 +80,5 @@ export const Nav = styled.div`
       margin-right: 0px; 
     }
   }
-`;
+  }
+`
