@@ -7,11 +7,11 @@ export const Nav = styled.div`
   font-size: 12px;
   text-transform: uppercase;
   height: 4rem; 
-  width: 82.5%;
+  width: 99%;
   
   overflow: hidden;
   z-index: 21; 
-  padding-top: .75rem;
+  padding-top: .5rem;
   position: fixed;
   top: 0; 
 
@@ -31,7 +31,8 @@ export const Nav = styled.div`
     transform: translateY(-3px);
   }
 
-  h1 {
+  .title {
+    padding-top: -1rem;
     &:hover {
       color: #1e90ff;
       text-decoration: none;

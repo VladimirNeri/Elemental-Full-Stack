@@ -11,13 +11,18 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  devtool: 'eval-source-map',
+  mode: 'development', 
   entry: './src/index.js',
   output: {
     // NEW
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   }, // NEW Ends
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+  },
   plugins: [htmlPlugin],
   module: {
     rules: [

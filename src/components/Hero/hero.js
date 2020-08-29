@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 import { Link } from 'react-router-dom';
 
-import slide01 from '../../data/images/1.jpg';
+import slide01 from '../../data/images/23.jpg';
 import slide02 from '../../data/images/14.jpg';
 import slide03 from '../../data/images/18.jpg';
 import slide04 from '../../data/images/22.jpg';
