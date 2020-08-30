@@ -15,7 +15,7 @@ export const Nav = styled.div`
   position: fixed;
   top: 0; 
 
-  @media (max-width: 1029px) {
+  @media (max-width: 950px) {
     grid-template-columns: 1fr 1fr; 
     margin: auto;
   }
@@ -32,7 +32,7 @@ export const Nav = styled.div`
   }
 
   .title {
-    padding-top: -1rem;
+    padding-top: 0.5rem;
     &:hover {
       color: #1e90ff;
       text-decoration: none;
@@ -42,7 +42,7 @@ export const Nav = styled.div`
   .links {
     grid-column: 2/3; 
     
-    @media (max-width: 1029px) {
+    @media (max-width: 950px) {
       grid-column: 3/3;
       margin: auto;
     }
@@ -56,7 +56,7 @@ export const Nav = styled.div`
     grid-column: 3/3;
     justify-self: end;
     
-    @media (max-width: 1029px) {
+    @media (max-width: 950px) {
       display: none; 
     }
   }

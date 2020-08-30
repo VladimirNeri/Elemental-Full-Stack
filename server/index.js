@@ -15,6 +15,7 @@ const port = process.env.PORT || 3000;
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,
 }));
+// Serving static files
 app.use(express.static(path.join(__dirname, './dist')));
 
 /* Routes Definitions */
