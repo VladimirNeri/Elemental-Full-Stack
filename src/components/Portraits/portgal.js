@@ -4,7 +4,7 @@ import data from '../../data/posts';
 
 const Portgal = () => {
   let portData = data.filter((data) => data.category === 'portrait');
-
+  
   return (
     <Masonry
       breakpointCols={{ default: 3, 800: 2 }}

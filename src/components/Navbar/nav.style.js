@@ -11,7 +11,7 @@ export const Nav = styled.div`
   
   overflow: hidden;
   z-index: 21; 
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   position: fixed;
   top: 0; 
 

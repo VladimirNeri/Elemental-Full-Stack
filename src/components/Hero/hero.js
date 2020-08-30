@@ -13,6 +13,7 @@ import { HeroStyl } from './hero.style';
 const Hero = () => {
   return (
     <HeroStyl>
+      {/* Set interval speed */}
       <Carousel interval={8000} bsPrefix='carousel'>
         <Carousel.Item bsPrefix='carousel-item'>
           <Link to='/posts/fall'>
