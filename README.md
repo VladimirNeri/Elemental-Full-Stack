@@ -1,6 +1,6 @@
 # Elemental
 
-Elemental is the demo version of a subscription website.  The content of posts are accessible to to users once they subscribe and login with their account information.  
+Elemental is the demo version of a subscription website.  The posts are accessible to users once they subscribe and login with their account information.  
 
 - The app registers new subscribers and members. 
 - Process monthly dues with recurring payments. 
