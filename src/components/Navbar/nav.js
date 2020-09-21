@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import routes from '../../data/routes';
 import data from '../../data/contact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import Hamburger from '../Hamburger/hamburger'; 
 // style
 import { Nav } from './nav.style';
 
@@ -43,6 +43,7 @@ function Navbar() {
           ))}
         </ul>
       </div>
+      <Hamburger />
     </Nav>
   );
 }
