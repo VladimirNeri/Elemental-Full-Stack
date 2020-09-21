@@ -51,6 +51,10 @@ export const Nav = styled.div`
     }
   }
 
+  .button {
+    min-width: 65px; 
+  }
+
   .icons {
     grid-column: 3/3;
     justify-self: end;

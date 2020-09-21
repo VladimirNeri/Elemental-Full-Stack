@@ -21,7 +21,7 @@ const Index = () => {
         <Route path='/nature' component={Nature} />
         <Route path='/posts' component={Blog} />
         <Route path='/submit' component={Submit} />
-        <Route path='/signup' component={Signpage} />
+        <Route path='/subscribe' component={Signpage} />
       </Switch>
     </Router>
   );

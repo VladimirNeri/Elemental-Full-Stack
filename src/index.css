@@ -9,9 +9,10 @@
 
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 62.5%;
+  box-sizing: border-box; /* change box model so borders and padding are not added to total height and width */
+  font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px; */
 }
+
 @media only screen and (max-width: 75em) {
   html {
     font-size: 50%;
@@ -19,8 +20,8 @@ html {
 }
 
 body {
-  font-family: "Nunito", sans-serif;
-  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; 
   line-height: 1.6;
   margin-top: 3rem;
 
@@ -33,6 +34,7 @@ body {
   margin-left: 0;  
   margin-right: 0; 
   height: auto; 
+  
 
   @media only screen and (max-width: 487px) {
     z-index: -1; 
@@ -50,7 +52,6 @@ body {
 .my-masonry-grid_column {
   padding-left: 10px; /* gutter size */
   background-clip: padding-box;
-  
 }
 
 /* Style your items */
@@ -60,10 +61,12 @@ body {
 }
 
 .image {
-  /* object-fit: cover;  */
+  object-fit: cover; 
   padding: 0; 
   max-width: 100%;
   height: auto; 
   background-size: cover; 
   background-position: center; 
 }
+
+
