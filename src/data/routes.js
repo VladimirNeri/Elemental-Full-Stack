@@ -5,6 +5,10 @@ const data = [
     index: true,
   },
   {
+    path: '/about', 
+    label: 'About'
+  },
+  {
     path: '/portraits', 
     label: 'Portraits'
   },
@@ -17,8 +21,8 @@ const data = [
     label: 'Submit'
   },
   {
-    path: '/subscribe',
-    label: 'Subscribe'
+    path: '/search',
+    label: 'Search'
   }
 ];
 
