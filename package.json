@@ -2,7 +2,7 @@
   "name": "elemental",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://vladimirneri.github.io/elemental-full-stack/",
+  "homepage": ".",
   "dependencies": {
     "@auth0/auth0-react": "^1.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
