@@ -4,13 +4,13 @@ export const Nav = styled.div`
   background-color: white;
   display: grid;
   grid-template-columns: 1fr auto 1fr; 
-  font-size: 12px;
   text-transform: uppercase;
-  height: 4rem; 
+  height: 5rem; 
   width: 99%;
   
+  /* fix navbar to top */
   z-index: 21; 
-  padding-top: 0.5rem;
+  padding-top: 1.25em;
   position: fixed;
   top: 0; 
 
@@ -31,7 +31,8 @@ export const Nav = styled.div`
   }
 
   .title {
-    padding-top: 0.5rem;
+    padding-top: 0.5rem; 
+
     &:hover {
       color: #1e90ff;
       text-decoration: none;
@@ -46,13 +47,13 @@ export const Nav = styled.div`
       margin: auto;
     }
 
-    @media (max-width: 487px) {
+    @media (max-width: 660px) {
       display: none;
     }
   }
 
   .button {
-    min-width: 65px; 
+    min-width: 70px; 
   }
 
   .icons {
@@ -67,7 +68,7 @@ export const Nav = styled.div`
   ul {
     padding: 5px; 
     align-content: center;
-    font-size: 16px; 
+    font-size: 17px; 
 
     a {
       color: inherit; 
@@ -76,7 +77,7 @@ export const Nav = styled.div`
     
   li {
     display: inline-block;
-    margin-right: 20px; 
+    margin-right: 30px; 
     transition: opacity 0.5s ease; 
     cursor: pointer; 
     
@@ -84,5 +85,5 @@ export const Nav = styled.div`
       margin-right: 0px; 
     }
   }
-  }
+}
 `

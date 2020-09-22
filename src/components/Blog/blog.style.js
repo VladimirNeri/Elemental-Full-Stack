@@ -3,25 +3,39 @@ import styled from 'styled-components';
 export const Pagstyl = styled.div`
   margin-top: 1em; 
   text-align: center; 
-  padding: 20px; 
   font-size: 12px; 
 
-  p {
-    font-size: 14;
-    margin-top: 1em; 
-    margin-bottom: 1em; 
+  h3 {
+    margin-top: 2em; 
     display: block; 
-    width: 40%;
-    margin-left: auto; 
-    margin-right: auto; 
+  }
+
+  p {
+    width: 700px;
+    display: block; 
+    margin-top: 1em; 
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px; 
   }
 
   .image {
     display: block;
-    margin-top: 1em; 
-    margin-bottom: 1em; 
+    margin-top: 2em; 
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+  }
+
+  .fall-image {
+    display: inline-block;
+    margin-top: 2em; 
+    padding: 10px; 
+  }
+
+  .video {
+    display: block;
+    margin-top: 2em; 
+    margin-left: auto;
+    margin-right: auto;
   }
 `

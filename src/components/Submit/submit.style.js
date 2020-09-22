@@ -4,15 +4,14 @@ export const Submitstyle = styled.div`
   margin-top: 1em; 
   text-align: center; 
   padding: 20px; 
-  font-size: 12px; 
 
   p {
     text-align: justify; 
-    font-size: 14;
+    font-size: 18px;
     margin-top: 1em; 
     margin-bottom: 1em; 
     display: block; 
-    width: 70%;
+    width: 60%;
     margin-left: auto; 
     margin-right: auto; 
   }
