@@ -7,7 +7,7 @@ export const Submitstyle = styled.div`
 
   p {
     text-align: justify; 
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 1em; 
     margin-bottom: 1em; 
     display: block; 
