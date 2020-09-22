@@ -14,9 +14,7 @@ Users may comment on each post and add posts to their favorites.
 2.  Express
 3.  MongoDb
 4.  Node
-5.  Webpack
-6.  Babel
-7.  Masonry-Grid
-8.  Auth0
-9.  Stripe
+5.  Masonry-Grid
+6.  Auth0
+7.  Stripe
 

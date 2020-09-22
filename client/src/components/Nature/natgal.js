@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Masonry from 'react-masonry-css';
-import data from '../../data/posts';
 
-const Portgal = () => {
-  let portData = data.filter((data) => data.category === 'portrait');
-  const newData = portData.slice().reverse();
+import data from '../../data/posts';
+// import Natcell from './natcell';
+
+const Natgal = () => {
+  let natData = data.filter((data) => data.category === 'nature');
+  const newData = natData.slice().reverse();
   return (
     <Masonry
       breakpointCols={{ default: 3, 800: 2 }}
@@ -13,7 +15,7 @@ const Portgal = () => {
     >
       {newData.map((post) => (
         <div className="image" key={post.id}>
-          <a href={`#${post.path}`}>
+          <a href={post.path}>
             <img src={post.image} alt={post.title} className="image" />
           </a>
         </div>
@@ -22,4 +24,4 @@ const Portgal = () => {
   );
 };
 
-export default Portgal;
+export default Natgal;
