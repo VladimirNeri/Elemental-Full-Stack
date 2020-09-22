@@ -15,7 +15,7 @@ const Natgal = () => {
     >
       {newData.map((post) => (
         <div className="image" key={post.id}>
-          <a href={`#${post.path}`}>
+          <a href={post.path}>
             <img src={post.image} alt={post.title} className="image" />
           </a>
         </div>
