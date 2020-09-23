@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import data from '../../data/blogposts/08062020';
 import { Pagstyl } from './blog.style';
 import dayjs from 'dayjs';
+import Disqus from '../Disqus/disqus';
 
 const Summer = () => {
   let pagData = data.filter((data) => data.title === 'Summer');
@@ -24,7 +25,6 @@ const Summer = () => {
             src={post.image.image1}
             alt={post.title}
             className='image'
-            width='1000'
           />
           <h3>"Ut enim consequatur?"</h3>
 
@@ -53,6 +53,9 @@ const Summer = () => {
           />
         </header>
       ))}
+      <div className='disqus'>
+        <Disqus />
+      </div>
     </Pagstyl>
   );
 };

@@ -25,7 +25,7 @@ app.use(routes);
 //   process.env.DATABASE_PASSWORD
 // );
 // mongoose
-//   .connect(DB, {
+//   .connect(DB || 'mongodb://localhost:27017/elemental', {
 //     useNewUrlParser: true,
 //     useCreateIndex: true,
 //     useFindAndModify: false,
@@ -33,14 +33,13 @@ app.use(routes);
 //   })
 //   .then(() => console.log('DB connection successful'));
 
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/elemental', {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-  });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/elemental', {
+  useCreateIndex: true,
+  useNewUrlParser: true,
+});
 
 // Start the API server
 const PORT = process.env.PORT || 3001;
-const server = app.listen(PORT, () =>
+app.listen(PORT, () =>
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
 );
-
