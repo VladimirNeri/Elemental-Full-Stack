@@ -36,6 +36,7 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/elemental', {
   useCreateIndex: true,
   useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 // Start the API server

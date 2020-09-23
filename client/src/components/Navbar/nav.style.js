@@ -4,13 +4,12 @@ export const Nav = styled.div`
   background-color: white;
   display: grid;
   grid-template-columns: 1fr auto 1fr; 
-  text-transform: uppercase;
   height: 5rem; 
   width: 99%;
   
   /* fix navbar to top */
   z-index: 21; 
-  padding-top: 1.25em;
+  padding-top: 1.2em;
   position: fixed;
   top: 0; 
 
@@ -31,7 +30,7 @@ export const Nav = styled.div`
   }
 
   .title {
-    padding-top: 0.5rem; 
+    font-size: 4em; 
 
     &:hover {
       color: #1e90ff;
@@ -41,7 +40,8 @@ export const Nav = styled.div`
 
   .links {
     grid-column: 2/3; 
-    
+    text-transform: uppercase;
+
     @media (max-width: 950px) {
       grid-column: 3/3;
       margin: auto;
