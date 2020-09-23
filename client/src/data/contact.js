@@ -5,7 +5,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const data = [
   {
-    link: 'https://github.com/VladimirNeri/elemental',
+    link: 'https://github.com/VladimirNeri/Elemental-Full-Stack',
     label: 'Github', 
     icon: faGithub,
   }, 

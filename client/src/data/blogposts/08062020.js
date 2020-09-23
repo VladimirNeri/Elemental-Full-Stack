@@ -33,7 +33,9 @@ const data = [
     category: 'nature',
     image: {
       image1: require('../images/18.jpg'),
-      image2: require('../images/19.jpg')
+      image2: require('../images/19.jpg'),
+      image3: require('../images/20.jpg'),
+
     },
     video: require('../videos/spring.mp4'),
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' 
@@ -46,7 +48,8 @@ const data = [
     category: 'nature',
     image: {
       image1: require('../images/16.jpg'),
-      image2: require('../images/17.jpg')
+      image2: require('../images/17.jpg'),
+      image3: require('../images/15.jpg'),
     },
     video: require('../videos/summer.mp4'),
     desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' 
