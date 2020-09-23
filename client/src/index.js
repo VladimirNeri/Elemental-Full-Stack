@@ -8,7 +8,7 @@ import Portraits from './views/portraits';
 import Nature from './views/nature';
 import Blog from './views/blog'; 
 import Submit from './views/submit';
-import Signpage from './views/signup'; 
+import Search from './views/search'; 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
@@ -22,7 +22,7 @@ ReactDOM.render(
         <Route path="/nature" component={Nature} />
         <Route path="/posts" component={Blog} />
         <Route path="/submit" component={Submit} />
-        <Route path="/search" component={Signpage} />
+        <Route path="/search" component={Search} />
       </Switch>
     </Router>,
   document.getElementById('root')

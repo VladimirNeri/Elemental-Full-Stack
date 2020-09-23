@@ -1,19 +1,19 @@
 import React from 'react'; 
 import { Helmet } from 'react-helmet';
 import Navbar from '../components/Navbar/nav';
-import Signup from '../components/Signup/signup';
+import Search from '../components/Search/search';
 
-const Signpage= () => { 
+const Searchpage = () => { 
   return (
     <div className="container">
       <Helmet>
-          <title>Elemental | Signup</title>
-          <meta name="description" content="Signup Page" />
+          <title>Elemental | Search</title>
+          <meta name="description" content="Search Page" />
         </Helmet>
       <Navbar />
-      <Signup />
+      <Search />
     </div>
   );
 }
 
-export default Signpage;
+export default Searchpage;
