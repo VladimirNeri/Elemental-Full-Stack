@@ -25,7 +25,6 @@ const Summer = () => {
             src={post.image.image1}
             alt={post.title}
             className='image'
-            width='1000'
           />
           <h3>"Ut enim consequatur?"</h3>
 

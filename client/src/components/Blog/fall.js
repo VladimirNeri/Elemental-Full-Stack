@@ -27,7 +27,7 @@ const Fall = () => {
             src={post.image.image1}
             alt={post.title}
             className='image'
-            width='1000'
+            
           />
           <h3>"Ut enim consequatur?"</h3>
           <p className='description'>{post.desc}</p>
@@ -35,22 +35,20 @@ const Fall = () => {
             src={post.image.image2}
             alt={post.title}
             className='fall-image'
-            width='550'
+        
           />
           <img
             src={post.image.image3}
             alt={post.title}
             className='fall-image'
-            height='725'
-            width='550'
+            
           />
 
           <video
             src={post.video}
             type='video/mp4'
             className='video'
-            width='750'
-            height='500'
+           
             controls
           />
         </header>

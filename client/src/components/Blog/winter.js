@@ -33,7 +33,7 @@ const Winter = () => {
             src={post.image.image2}
             alt={post.title}
             className='image'
-            width='550'
+            
           />
           <video
             src={post.video}
