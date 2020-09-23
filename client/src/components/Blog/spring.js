@@ -27,6 +27,21 @@ const Spring = () => {
             width='1000'
           />
           <h3>"Ut enim consequatur?"</h3>
+          <p className='description'>{post.desc}</p>
+          <img
+            src={post.image.image2}
+            alt={post.title}
+            className='fall-image'
+            height='700'
+            width='550'
+          />
+          <img
+            src={post.image.image3}
+            alt={post.title}
+            className='fall-image'
+            width='550'
+            height='700'
+          />
           <video
             src={post.video}
             type='video/mp4'

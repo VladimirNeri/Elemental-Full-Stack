@@ -28,6 +28,13 @@ const Winter = () => {
             width='1000'
           />
           <h3>"Ut enim consequatur?"</h3>
+          <p className='description'>{post.desc}</p>
+          <img
+            src={post.image.image2}
+            alt={post.title}
+            className='image'
+            width='550'
+          />
           <video
             src={post.video}
             type='video/mp4'
