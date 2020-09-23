@@ -33,7 +33,7 @@ app.use(routes);
 //   })
 //   .then(() => console.log('DB connection successful'));
 
-  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks', {
+  mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/elemental', {
     useCreateIndex: true,
     useNewUrlParser: true,
   });
