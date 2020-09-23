@@ -7,12 +7,24 @@ export const Submitstyle = styled.div`
 
   p {
     text-align: justify; 
-    font-size: 17px;
+    font-size: 2em;
     margin-top: 1em; 
     margin-bottom: 1em; 
     display: block; 
-    width: 60%;
+    width: 80%;
     margin-left: auto; 
     margin-right: auto; 
+
+
+    @media (max-width: 690px) {
+      width: 90%;
+      font-size: 1.5em;
+    }
+
+    @media (max-width: 490px) {
+      width: 100%;
+      font-size: 1.25em;
+    }
+
   }
 `
