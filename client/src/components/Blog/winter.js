@@ -25,15 +25,14 @@ const Winter = () => {
             src={post.image.image1}
             alt={post.title}
             className='image'
-            width='1000'
+            width='900'
           />
           <h3>"Ut enim consequatur?"</h3>
           <p className='description'>{post.desc}</p>
           <img
             src={post.image.image2}
             alt={post.title}
-            className='image'
-            
+            className='win-image'
           />
           <video
             src={post.video}

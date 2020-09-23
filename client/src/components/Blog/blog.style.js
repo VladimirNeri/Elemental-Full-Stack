@@ -4,10 +4,10 @@ export const Pagstyl = styled.div`
   margin-top: 1em;
   text-align: center;
   font-size: 12px;
-  
+
   @media (max-width: 764px) {
-    font-size: 10px; 
-    }
+    font-size: 10px;
+  }
   h3 {
     margin-top: 2em;
     display: block;
@@ -22,8 +22,8 @@ export const Pagstyl = styled.div`
     font-size: 14px;
 
     @media (max-width: 764px) {
-    width: 80%;
-    font-size: 10px; 
+      width: 80%;
+      font-size: 10px;
     }
   }
 
@@ -33,7 +33,7 @@ export const Pagstyl = styled.div`
     margin-top: 2em;
     margin-left: auto;
     margin-right: auto;
-    width: 750px; 
+    width: 850px;
 
     @media (max-width: 678px) {
       width: 480px;
@@ -41,7 +41,16 @@ export const Pagstyl = styled.div`
     @media (max-width: 498px) {
       width: 280px;
     }
+  }
 
+  .win-image {
+    width: 550px;
+    @media (max-width: 678px) {
+      width: 480px;
+    }
+    @media (max-width: 498px) {
+      width: 280px;
+    }
   }
 
   .fall-image {
@@ -49,7 +58,7 @@ export const Pagstyl = styled.div`
     margin-top: 2em;
     padding: 10px;
     height: 725px;
-    width: 550px; 
+    width: 550px;
 
     @media (max-width: 764px) {
       height: 580px;
@@ -59,8 +68,8 @@ export const Pagstyl = styled.div`
     @media (max-width: 498px) {
       height: 370px;
       width: 280px;
+      padding: 0px; 
     }
-
   }
 
   .video {
@@ -68,9 +77,14 @@ export const Pagstyl = styled.div`
     margin-left: auto;
     margin-right: auto;
     width: 750px;
+    margin-top: 10px;
 
     @media (max-width: 800px) {
       width: 80%;
+    }
+
+    @media (max-width: 678px) {
+      margin-top: 0; 
     }
   }
 
@@ -82,7 +96,7 @@ export const Pagstyl = styled.div`
     width: 80%;
 
     @media (max-width: 498px) {
-    margin-top: 15px;
+      margin-top: 15px;
+    }
   }
-}
-`
+`;
