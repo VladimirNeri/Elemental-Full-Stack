@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import data from '../../data/blogposts/08062020';
 import { Pagstyl } from './blog.style';
 import dayjs from 'dayjs';
-
+import Disqus from '../Disqus/disqus';
 const Winter = () => {
   let pagData = data.filter((data) => data.title === 'Winter');
   return (
@@ -45,6 +45,9 @@ const Winter = () => {
           />
         </header>
       ))}
+       <div className='disqus'>
+        <Disqus />
+      </div>
     </Pagstyl>
   );
 };
