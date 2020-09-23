@@ -84,4 +84,5 @@ export const Pagstyl = styled.div`
     @media (max-width: 498px) {
     margin-top: 15px;
   }
-`;
+}
+`
