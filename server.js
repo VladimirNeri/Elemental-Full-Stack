@@ -25,7 +25,7 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 );
 mongoose
-  .connect(DB || 'mongodb://localhost:27017/elemental', {
+  .connect(DB, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
@@ -34,7 +34,7 @@ mongoose
   .then(() => console.log('DB connection successful'));
 
 // Start the API server
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () =>
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
 );
