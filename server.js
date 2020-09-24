@@ -20,12 +20,12 @@ if (process.env.NODE_ENV === 'production') {
 // Add routes, both API and view
 app.use(routes);
 
-// const DB = process.env.DATABASE.replace(
-//   '<PASSWORD>',
-//   process.env.DATABASE_PASSWORD
-// );
+const DB = process.env.DATABASE.replace(
+  '<PASSWORD>',
+  process.env.DATABASE_PASSWORD
+);
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/elemental', {
+  .connect(DB || 'mongodb://localhost:27017/elemental', {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
