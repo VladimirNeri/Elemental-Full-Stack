@@ -5,7 +5,7 @@ export const HamStyl = styled.div`
     display: none;
   }
 
-  @media only screen and (max-width: 487px) {
+  @media only screen and (max-width: 720px) {
     .hamburger-container {
       display: initial;
     }

@@ -48,7 +48,7 @@ export const Nav = styled.div`
       margin: auto;
     }
 
-    @media (max-width: 690px) {
+    @media (max-width: 720px) {
       display: none;
     }
   }

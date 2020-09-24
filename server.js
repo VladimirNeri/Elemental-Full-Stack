@@ -24,20 +24,14 @@ app.use(routes);
 //   '<PASSWORD>',
 //   process.env.DATABASE_PASSWORD
 // );
-// mongoose
-//   .connect(DB || 'mongodb://localhost:27017/elemental', {
-//     useNewUrlParser: true,
-//     useCreateIndex: true,
-//     useFindAndModify: false,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => console.log('DB connection successful'));
-
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/elemental', {
-  useCreateIndex: true,
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/elemental', {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('DB connection successful'));
 
 // Start the API server
 const PORT = process.env.PORT || 3001;
