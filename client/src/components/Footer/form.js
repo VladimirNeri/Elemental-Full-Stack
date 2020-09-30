@@ -3,18 +3,21 @@ import React, { Component } from 'react';
 class Form extends Component {
   constructor(props) {
     super();
-    this.state = { value: '' };
-
+    this.state = { 
+      firstName: '',
+      lastName: '', 
+      email: ''
+    };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({ value: event.target.value });
+    this.setState({ [event.target.name]: event.target.value });
   }
-
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+  
+  handleSubmit(event, form) {
+    alert('You have subscribed!');
     event.preventDefault();
   }
 
@@ -26,7 +29,7 @@ class Form extends Component {
           <input
             className='firstName'
             type='text'
-            value={this.state.value}
+            value={this.state.name}
             onChange={this.handleChange}
             placeholder='First Name'
           />
@@ -34,16 +37,15 @@ class Form extends Component {
           <input
             className='lastName'
             type='text'
-            value={this.state.value}
+            value={this.state.name}
             onChange={this.handleChange}
             placeholder='Last Name'
           />
 
-         
           <input
             className='email'
             type='text'
-            value={this.state.value}
+            value={this.state.name}
             onChange={this.handleChange}
             placeholder='Email'
           />
