@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import API from '../../utils/API'; 
 
 class Form extends Component {
   constructor(props) {
     super();
-    this.state = { 
-      firstName: '',
-      lastName: '', 
-      email: ''
+    this.state = {
+      firstname: '',
+      lastname: '',
+      email: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,10 +16,15 @@ class Form extends Component {
   handleChange(event) {
     this.setState({ [event.target.name]: event.target.value });
   }
-  
+
   handleSubmit(event, form) {
     alert('You have subscribed!');
     event.preventDefault();
+    API.createSub({
+      firstname: event.target[0].value,
+      lastname: event.target[1].value,
+      email: event.target[2].value,
+    }); 
   }
 
   render() {

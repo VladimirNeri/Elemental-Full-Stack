@@ -1,20 +1,10 @@
-const Subscriber = require('./../models/subModel');
+const db  = require('../models');
 
-exports.createSub = async (req, res) => {
-  try {
-    const newSubscriber = await Subscriber.create(req.body);
-
-    res.status(201).json({
-      status: 'success',
-      data: {
-        subscriber: newSubscriber,
-      },
-    });
-  } catch (err) {
-    res.status(400).json({
-      status: 'fail',
-      message: err,
-    });
-  }
+module.exports = {
+  create: function (req, res) {
+    db.Sub.create(req.body)
+    .then((dbSub) => res.json(dbSub))
+    .catch((err) => res.status(422).json(err));
+  },
 };
 

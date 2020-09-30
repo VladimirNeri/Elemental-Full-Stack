@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const subscriberSchema = new mongoose.Schema({
+const subSchema = new mongoose.Schema({
   firstname: {
     type: String, 
     required: true
@@ -16,6 +16,6 @@ const subscriberSchema = new mongoose.Schema({
   }
 });
 
-const Subscriber = mongoose.model('Subscriber', subscriberSchema); 
+const Sub = mongoose.model('Subscriber', subSchema); 
 
-module.exports = Subscriber; 
+module.exports = Sub; 

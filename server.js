@@ -33,7 +33,6 @@ mongoose
   })
   .then(() => console.log('DB connection successful'));
 
-
 // Start the API server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () =>
