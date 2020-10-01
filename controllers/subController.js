@@ -1,5 +1,6 @@
 const db = require('../models');
 
+
 module.exports = {
   create: function (req, res) {
     db.Sub.create(req.body)
