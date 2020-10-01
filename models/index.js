@@ -1,4 +1,3 @@
-
 module.exports = {
-  Subscriber: require("./submodel")
+  Subscriber: require('./submodel'),
 };
