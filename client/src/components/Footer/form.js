@@ -17,7 +17,7 @@ class Form extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  handleSubmit(event, form) {
+  handleSubmit(event) {
     alert('You have subscribed!');
     event.preventDefault();
     API.createSub({
