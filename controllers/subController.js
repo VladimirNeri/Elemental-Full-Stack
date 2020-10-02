@@ -17,11 +17,11 @@ const Subscriber = require('../models/submodel');
 
 exports.create = async (req, res) => {
   try {
-    const newSubScriber = await Subscriber.create(req.body);
+    const Subscribers = await Subscriber.create(req.body);
     res.status(201).json({
       status: 'success',
       data: {
-        Sub: newSubScriber,
+        Subscribers
       },
     });
   } catch (err) {
