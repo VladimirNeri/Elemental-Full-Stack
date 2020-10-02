@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const subController = require('../../controllers/subController');
+const subcontroller = require('../../controllers/subcontroller');
 
 router
   .route('/')
-  .post(subController.create);
+  .post(subcontroller.create);
 
 module.exports = router;
