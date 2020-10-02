@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
-const subController = require(path.join(__dirname, '../../controllers/subcontroller'));
+const subController = require('./../controllers/subcontroller');
 
 router
   .route('/')
