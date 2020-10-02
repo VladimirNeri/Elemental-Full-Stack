@@ -6,7 +6,6 @@ const routes = require('./routes');
 const app = express();
 
 dotenv.config({ path: './config.env' });
-// console.log(process.env);
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
