@@ -1,7 +1,7 @@
 const path = require('path');
 const router = require('express').Router();
 const subRoutes = require('./sub');
-const postRoutes = require('./post'); 
+const postRoutes = require('./post');
 
 // API Routes
 router.use('/sub', subRoutes);
