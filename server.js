@@ -1,8 +1,9 @@
 /* Required External Modules */
 const express = require('express');
+const path = require('path');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const routes = require('./routes/api');
+const routes = require('./routes');
 const app = express();
 const PORT = process.env.PORT || 8000;
 
@@ -15,6 +16,10 @@ app.use(express.json());
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
+  
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, './client/build/index.html'));
+  });
 }
 
 // Add routes, both API and view
