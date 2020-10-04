@@ -22,7 +22,9 @@ if (process.env.NODE_ENV === 'production') {
 app.use('/api', subRoutes);
 // router.use('/api/post', postRoutes);
 
-app.use(express.static(path.join('client/build')));
+app.use(function (req, res, next) {
+  res.sendFile(path.resolve(__dirname, './client/build/index.html'));
+});
 
 const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
