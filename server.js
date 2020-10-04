@@ -2,7 +2,8 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const routes = require('./routes');
+// const routes = require('./routes');
+const subRoutes = require('./routes/api/sub')
 const app = express();
 
 dotenv.config({ path: './config.env' });
@@ -18,7 +19,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Add routes, both API and view
-app.use(routes);
+app.use('/api', subRoutes);
+// router.use('/api/post', postRoutes);
+
+app.use(function (req, res) {
+  res.sendFile(path.join(__dirname, './client/build/index.html'));
+});
 
 const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
