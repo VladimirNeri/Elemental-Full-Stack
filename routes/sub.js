@@ -1,7 +1,6 @@
 const express = require('express');
-const subController = require('../controllers/subcontroller');
-
 const router = express.Router();
+const subController = require('../controllers/subcontroller');
 
 router.route('/').post(subController.create);
 

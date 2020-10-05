@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-
 const subRoutes = require('./routes/sub');
 
 // Configure body parsing for AJAX requests
