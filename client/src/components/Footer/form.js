@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import API from '../../utils/API'; 
-
+import { FormStyl } from './form.style';
 class Form extends Component {
   constructor(props) {
     super();
@@ -29,6 +29,7 @@ class Form extends Component {
 
   render() {
     return (
+      <FormStyl>
       <div className='subscribe'>
         <h3 className='title'>Subscribe to the Newsletter</h3>
         <form className='form' onSubmit={this.handleSubmit}>
@@ -59,6 +60,7 @@ class Form extends Component {
           <input type='submit' value='Submit' className='submit' />
         </form>
       </div>
+      </FormStyl>
     );
   }
 }

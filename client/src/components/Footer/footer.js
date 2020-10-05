@@ -8,11 +8,13 @@ class Footer extends Component {
   state = {
     showList: false,
     highlightedText: false,
+    color: false,
   };
 
   switch = () => {
     this.setState((prevState) => ({
       showList: !prevState.showList,
+      color: !prevState.color,
     }));
   };
 
@@ -26,7 +28,11 @@ class Footer extends Component {
     return (
       <FootStyl>
         <div className='footer'>
-          <button className='display' onClick={this.switch}>
+          <button
+            className='btn_Class'
+            onClick={this.switch}
+            style={{ backgroundColor: this.state.color ? 'orangered' :  '#4caf50'}}
+          >
             {this.state.showList ? 'Close' : 'Footer'}
           </button>
 
@@ -44,7 +50,9 @@ class Footer extends Component {
                 <Form />
               </div>
               <div className='exclusive'>
-                <h3 className='title'>Digital Publications / Exclusive Content</h3>
+                <h3 className='title'>
+                  Digital Publications / Exclusive Content
+                </h3>
               </div>
               <div
                 className={cx('copyright', {

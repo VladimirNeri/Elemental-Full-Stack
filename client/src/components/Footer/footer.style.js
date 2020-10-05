@@ -16,17 +16,22 @@ export const FootStyl = styled.div`
       padding-right: 1.5em;
     }
 
-    .display {
+    .btn_Class {
       float: right;
       z-index: 1;
       width: 120px;
       height: 40px;
-      background-color: orangered;
+      /* background-color: orangered; */
+      color: white;
       border: none;
       border-radius: 5px;
       outline: none;
       cursor: pointer;
       transition: background-color 350ms;
+
+      .btn-active {
+        background-color: #4caf50; 
+      }
 
       @media (max-width: 610px) {
         width: 50px;
