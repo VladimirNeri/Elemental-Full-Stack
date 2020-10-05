@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
-// const subRoutes = require('./routes/sub');
-const router = express.Router();
-const path = require('path');
-const Subscriber = require('./models/submodel');
+const subRoutes = require('./routes/sub');
+const path = require('path'); 
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
@@ -26,22 +24,7 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.route('/api/sub').post(async (req, res) => {
-  try {
-    const Subscribers = await Subscriber.create(req.body);
-    res.status(201).json({
-      status: 'success',
-      data: {
-        Subscribers,
-      },
-    });
-  } catch (err) {
-    res.status(400).json({
-      status: 'fail',
-      message: err,
-    });
-  }
-});
+app.use('/api/sub', subRoutes);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
