@@ -1,7 +1,7 @@
-// import axios from 'axios'; 
+import axios from 'axios'; 
 
-// export default {
-//   createSub: function(subscribers) {
-//     return axios.post('/api/sub', subscribers);
-//   }
-// }
+export default {
+  createSub: function(subscribers) {
+    return axios.post('/api/sub', subscribers);
+  }
+}
