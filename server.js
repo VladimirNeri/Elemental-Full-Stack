@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Add routes, both API and view
-app.use(routes);
+
 
 const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
@@ -32,6 +32,8 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => console.log('DB connection successful'));
+
+app.use(routes);
 
 // Start the API server
 app.listen(PORT, () =>
