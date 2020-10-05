@@ -1,5 +1,5 @@
 const path = require('path');
-const router = require('express').Router();
+const router = express.Router();
 const subRoutes = require('./sub');
 const postRoutes = require('./post');
 
