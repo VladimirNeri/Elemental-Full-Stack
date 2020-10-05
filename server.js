@@ -1,24 +1,11 @@
 /* Required External Modules */
-const express = require('express');
+
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const routes = require('./routes');
-const app = express();
-
 dotenv.config({ path: './config.env' });
-const PORT = process.env.PORT || 8000;
 
-// Configure body parsing for AJAX requests
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-// Serve up static assets
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-}
-
-// Add routes, both API and view
-app.use(routes);
+const app = require('./app')
 
 const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
@@ -34,6 +21,7 @@ mongoose
   .then(() => console.log('DB connection successful'));
 
 // Start the API server
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () =>
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
 );
