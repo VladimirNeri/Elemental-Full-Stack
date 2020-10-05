@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/api/sub', subRoutes);
+app.use('/sub', subRoutes);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
