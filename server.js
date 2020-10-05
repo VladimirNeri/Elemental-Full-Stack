@@ -20,18 +20,18 @@ if (process.env.NODE_ENV === 'production') {
 // Add routes, both API and view
 // app.use(routes);
 
-const DB = process.env.DATABASE.replace(
-  '<PASSWORD>',
-  process.env.DATABASE_PASSWORD
-);
-mongoose
-  .connect(DB, {
-    useCreateIndex: true,
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log('DB connection successful'));
+// const DB = process.env.DATABASE.replace(
+//   '<PASSWORD>',
+//   process.env.DATABASE_PASSWORD
+// );
+// mongoose
+//   .connect(DB, {
+//     useCreateIndex: true,
+//     useNewUrlParser: true,
+//     useFindAndModify: false,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => console.log('DB connection successful'));
 
 // Start the API server
 app.listen(PORT, () =>
