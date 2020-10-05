@@ -5,7 +5,7 @@ const subRoutes = require('./sub');
 const postRoutes = require('./post');
 
 // // API Routes
-router.use('/sub', subRoutes);
+// router.use('/sub', subRoutes);
 // router.use('/post', postRoutes);
 
 // If no API routes are hit, send the React app
