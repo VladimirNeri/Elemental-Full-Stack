@@ -22,7 +22,6 @@ app.use((req, res, next) => {
   next();
 });
 
-
 // 3) ROUTES
 app.use('/api/sub', subRoutes);
 
