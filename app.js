@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const subRoutes = require('./routes/sub');
+const routes = require('./routes');
 const path = require('path'); 
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
@@ -26,9 +26,9 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/api/sub', subRoutes);
+app.use('/api', routes);
 
-app.get('*', (req, res) => {
+app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
 });
 
