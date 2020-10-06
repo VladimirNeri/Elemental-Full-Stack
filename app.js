@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const subRoutes = require('./routes/sub');
 const path = require('path'); 
+const dotenv = require('dotenv');
+dotenv.config({ path: './config.env' });
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
