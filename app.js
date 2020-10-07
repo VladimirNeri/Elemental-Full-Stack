@@ -1,14 +1,12 @@
 const express = require('express');
 const app = express();
 const router = express.Router()
-// const routes = require('./routes');
 const path = require('path'); 
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
-// const Subscriber = require('./models/submodel');
-const mongoose = require('mongoose');
 
-// const subController = require('./controllers/subcontroller');
+const mongoose = require('mongoose');
+const Subscriber = mongoose.model('Subscribers', subSchema); 
 const subSchema = new mongoose.Schema({
   firstname: {
     type: String, 
@@ -25,7 +23,6 @@ const subSchema = new mongoose.Schema({
   }
 });
 
-const Subscriber = mongoose.model('Subscribers', subSchema); 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -65,8 +62,6 @@ router.post('/sub', async (req, res) => {
     });
   }
 });
-
-
 
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
