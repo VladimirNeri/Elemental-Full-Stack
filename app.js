@@ -29,11 +29,9 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/api', router)
+app.use('/api/sub', router)
 
-router
-    .route('/sub')
-    .post(subController.create);
+router.post(subController.create);
 
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
