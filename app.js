@@ -1,27 +1,28 @@
 const express = require('express');
 const app = express();
-const router = express.Router()
+const routes = require('./routes')
 const path = require('path'); 
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
-const mongoose = require('mongoose');
 
-const subSchema = new mongoose.Schema({
-  firstname: {
-    type: String, 
-    required: true
-  },
-  lastname: {
-    type: String, 
-    required: true
-  }, 
-  email: {
-    type: String, 
-    unique: true,
-    required: [true, 'You must have an email']
-  }
-});
-const Subscriber = mongoose.model('Subscribers', subSchema); 
+// const mongoose = require('mongoose');
+
+// const subSchema = new mongoose.Schema({
+//   firstname: {
+//     type: String, 
+//     required: true
+//   },
+//   lastname: {
+//     type: String, 
+//     required: true
+//   }, 
+//   email: {
+//     type: String, 
+//     unique: true,
+//     required: [true, 'You must have an email']
+//   }
+// });
+// const Subscriber = mongoose.model('Subscribers', subSchema); 
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
@@ -44,27 +45,7 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/api', router)
-
-
-
-
-router.post('/sub', async (req, res) => {
-  try {
-    const Subscribers = await Subscriber.create(req.body);
-    res.status(201).json({
-      status: 'success',
-      data: {
-        Subscribers
-      },
-    });
-  } catch (err) {
-    res.status(400).json({
-      status: 'fail',
-      message: err,
-    });
-  }
-});
+app.use('/api', routes)
 
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));

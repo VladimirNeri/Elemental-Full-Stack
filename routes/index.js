@@ -1,9 +1,9 @@
-// const express = require('express');
-// const router = express.Router();
-// const subController = require('../controllers/subcontroller');
+const express = require('express');
+const router = express.Router();
+const subcontroller = require('../controllers/subcontroller');
 
-// router
-//     .route('/sub')
-//     .post(subController.create);
+router
+    .route('/sub')
+    .post(subcontroller.create);
 
-// module.exports = router;
+module.exports = router;
