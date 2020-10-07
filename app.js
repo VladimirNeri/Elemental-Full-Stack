@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/api', routes, function (req, res, next) {
+app.use('/api', routes, function (err, req, res, next) {
   if (err) {
     res.status(500).send({ error: 'router not mounted in heroku'})
   } else {
