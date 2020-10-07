@@ -6,7 +6,22 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 const mongoose = require('mongoose');
 
-
+const subSchema = new mongoose.Schema({
+  firstname: {
+    type: String, 
+    required: true
+  },
+  lastname: {
+    type: String, 
+    required: true
+  }, 
+  email: {
+    type: String, 
+    unique: true,
+    required: [true, 'You must have an email']
+  }
+});
+const Subscriber = mongoose.model('Subscribers', subSchema); 
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
@@ -31,22 +46,8 @@ app.use((req, res, next) => {
 // 3) ROUTES
 app.use('/api', router)
 
-const Subscriber = mongoose.model('Subscribers', subSchema); 
-const subSchema = new mongoose.Schema({
-  firstname: {
-    type: String, 
-    required: true
-  },
-  lastname: {
-    type: String, 
-    required: true
-  }, 
-  email: {
-    type: String, 
-    unique: true,
-    required: [true, 'You must have an email']
-  }
-});
+
+
 
 router.post('/sub', async (req, res) => {
   try {
