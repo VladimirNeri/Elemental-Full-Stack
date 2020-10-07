@@ -6,6 +6,8 @@ const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 
+const subController = require('./controllers/subcontroller');
+
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -28,6 +30,10 @@ app.use((req, res, next) => {
 
 // 3) ROUTES
 app.use('/api', router)
+
+router
+    .route('/sub')
+    .post(subController.create);
 
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
