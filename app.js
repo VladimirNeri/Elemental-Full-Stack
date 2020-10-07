@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const router = express.Router()
 const routes = require('./routes');
 const path = require('path'); 
 const dotenv = require('dotenv');
@@ -26,9 +27,7 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/api', function(req, res, next) {
-  next(); 
-});
+app.use('/api', router)
 
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
