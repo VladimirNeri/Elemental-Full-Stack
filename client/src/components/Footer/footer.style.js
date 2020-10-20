@@ -44,7 +44,7 @@ export const FootStyl = styled.div`
       box-sizing: border-box;
       width: 100%;
       padding: 0 20px;
-      overflow: hidden; 
+      overflow: hidden;
       background-color: #75c0e0;
       border-radius: 5px 5px 0 0;
       height: 250px;
@@ -73,7 +73,7 @@ export const FootStyl = styled.div`
           margin-top: 10px;
           padding-left: 5px;
 
-          @media (max-width: 1254px) {
+          @media (max-width: 1265px) {
             margin-right: 0px;
           }
         }

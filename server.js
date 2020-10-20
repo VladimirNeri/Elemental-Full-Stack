@@ -1,8 +1,7 @@
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 dotenv.config({ path: './config.env' });
-
-const app = require('./app')
+const app = require('./app');
 
 const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
@@ -22,6 +21,3 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, () =>
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)
 );
-
-
-
