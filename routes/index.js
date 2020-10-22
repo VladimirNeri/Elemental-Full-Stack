@@ -1,22 +1,31 @@
 const express = require('express');
 const router = express.Router();
 const subcontroller = require('../controllers/subcontroller');
-const usercontroller = require('../controllers/usercontroller');
-const authcontroller = require('../controllers/authcontroller'); 
+
+const jwt = require('express-jwt');
+const jwksRsa = require('jwks-rsa');
+const authConfig = require('./../auth_config.json');
+
+const checkJwt = jwt({
+  secret: jwksRsa.expressJwtSecret({
+    cache: true,
+    rateLimit: true,
+    jwksRequestsPerMinute: 5,
+    jwksUri: `https://${authConfig.domain}/.well-known/jwks.json`,
+  }),
+
+  audience: authConfig.audience,
+  issuer: `https://${authConfig.domain}/`,
+  algorithms: ['RS256'],
+});
 
 // Subscribe to Newsletter
 router.post('/sub', subcontroller.create);
 
-// auth login
-router.post('/signup', authcontroller.signup);
-router.post('/login', authcontroller.login);
-router.get('/logout', authcontroller.logout);
-router.post('/forgotPassword', authcontroller.forgotPassword);
-router.patch('/resetPassword/:token', authcontroller.resetPassword);
-
-// Protect all routes after this middleware
-router.use(authcontroller.protect);
-
-router.patch('/updateMyPassword', authcontroller.updatePassword);
+router.get('/posts', checkJwt, (req, res) => {
+  res.send({
+    msg: 'Your access token was successfully validated!',
+  });
+});
 
 module.exports = router;

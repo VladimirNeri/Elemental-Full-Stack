@@ -11,6 +11,7 @@ const Hamburger = () => {
     <HamStyl>
       <div className='hamburger-container'>
         <nav className='hamburger'>
+
           <ul>
             {open ? (
               <li className='menu close-menu'>
@@ -26,6 +27,7 @@ const Hamburger = () => {
               </li>
             )}
           </ul>
+          
         </nav>
 
         <Menu right noOverlay width={240} isOpen={open}>

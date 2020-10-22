@@ -5,7 +5,7 @@ import Hero from '../components/Hero/hero';
 import Footer from '../components/Footer/footer';
 import { Helmet } from 'react-helmet';
 
-const App = () => {
+const Main = () => {
   return (
     <div className='container'>
       <Helmet>
@@ -20,4 +20,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Main;

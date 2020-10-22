@@ -4,3 +4,4 @@ build
 dist
 config.env
 .env
+auth_config.json
