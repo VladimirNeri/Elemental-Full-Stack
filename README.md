@@ -6,9 +6,10 @@ Elemental is the demo version of a subscription website.  The posts are accessib
 - Process monthly dues with recurring payments 
 - Updates subscriber profiles and stores user information
 
-Images and videos are provided by Unsplash and Coverr 
+Images and videos are provided by Unsplash and Coverr.
 
 Users may comment on each post and add posts to their favorites.  
+Add exclusive content to cart for purchase. 
 
 ## Technologies used: 
 
@@ -16,7 +17,7 @@ Users may comment on each post and add posts to their favorites.
 - Express
 - MongoDb
 - Node
-- Auth0
+- PassportJs
 - Stripe
 - Disqus
 

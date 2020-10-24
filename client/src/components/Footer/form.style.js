@@ -5,7 +5,7 @@ export const FormStyl = styled.div`
   select {
     border: 1px solid #ccc;
     border-radius: 4px;
- 
+
   }
 
   input[type='submit'] {

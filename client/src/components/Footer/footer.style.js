@@ -34,10 +34,6 @@ export const FootStyl = styled.div`
       }
     }
 
-    .display:active {
-      background-color: lemonchiffon;
-    }
-
     .list-body {
       top: 45px;
       z-index: 1;
@@ -45,7 +41,7 @@ export const FootStyl = styled.div`
       width: 100%;
       padding: 0 20px;
       overflow: hidden;
-      background-color: #75c0e0;
+      background-color: powderblue;
       border-radius: 5px 5px 0 0;
       height: 250px;
 
@@ -130,7 +126,7 @@ export const FootStyl = styled.div`
       width: auto;
       max-height: 40px;
       color: transparent;
-      background-color: #75c0e0;
+      background-color: powderblue;
     }
     /* This is where we can add the transition*/
     .list-transition-enter-active,
@@ -138,7 +134,7 @@ export const FootStyl = styled.div`
       top: 45px;
       width: 100%;
       max-height: 250px;
-      background-color: #75c0e0;
+      background-color: powderblue;
       transition: all 400ms;
 
       @media screen and (max-width: 610px) {
@@ -151,7 +147,7 @@ export const FootStyl = styled.div`
       top: 45px;
       width: 100%;
       max-height: 250px;
-      background-color: #75c0e0;
+      background-color: powderblue;
 
       @media screen and (max-width: 610px) {
         max-height: 350px;
@@ -163,7 +159,7 @@ export const FootStyl = styled.div`
       width: 100%;
       max-height: 0px;
       color: transparent;
-      background-color: #75c0e0;
+      background-color: powderblue;
       transition: all 400ms;
     }
   }

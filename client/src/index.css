@@ -81,3 +81,21 @@ body {
   left: 0;
   right: 0;
 }
+
+.modal-header {
+  background-color: powderblue;
+  font-size: 16px; 
+}
+
+.modal-body {
+  background-color: powderblue;
+  font-size: 16px;
+}
+
+.modal-title {
+  font-size: 18px; 
+}
+
+.close {
+  font-size: 26px; 
+}

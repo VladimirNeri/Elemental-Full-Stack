@@ -18,13 +18,13 @@ class Form extends Component {
   }
 
   handleSubmit(event) {
-    alert('You have subscribed!');
     event.preventDefault();
     API.createSub({
       firstname: event.target[0].value,
       lastname: event.target[1].value,
       email: event.target[2].value,
     }); 
+  
   }
 
   render() {
