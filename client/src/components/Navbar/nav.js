@@ -9,7 +9,7 @@ import LoginModal from '../Modal/modal';
 import { Nav } from './nav.style';
 
 const Navbar = () => {
-  const [modalShow, setModalShow] = React.useState(true);
+  const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <Nav>
