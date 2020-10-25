@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button'
-import { Redirect, Link } from 'react-router-dom';
+import { Link, Redirect} from 'react-router-dom';
 import axios from 'axios';
+import Button from 'react-bootstrap/Button';
 import { LoginStyl } from './login.style';
 //component for logging in, checks to see if username and password exist before letting in user
 
@@ -33,7 +33,7 @@ export default class LoginUser extends Component {
 
   loginUser(submitObject) {
     axios
-      .post('/apis/users/login', submitObject)
+      .post('/api/login', submitObject)
       .then(
         function (data) {
           console.log(data.data);
@@ -75,32 +75,37 @@ export default class LoginUser extends Component {
   }
 
   render() {
+    const { from } = { from: { pathname: '/' } };
+    const { redirectToReferrer } = this.state;
+
+    if (redirectToReferrer) {
+      return <Redirect to={from} />;
+    }
+
     return (
       <>
         <LoginStyl>
-          <div className='card-body'>
-            <form id='login'>
-              <div className='form-group'>
-                <label htmlFor='loginEmail'>Email address</label>
-                <input
-                  type='email'
-                  className='form-control'
-                  id='loginEmail'
-                  aria-describedby='emailHelp'
-                  placeholder='Enter email'
-                  
-                />
-                <small id='emailHelp' className='form-text text-muted'></small>
-              </div>
-              <div className='form-group'>
-                <label htmlFor='loginInputPassword'>Password</label>
-                <input
-                  type='password'
-                  className='form-control'
-                  id='loginInputPassword'
-                  placeholder='Password'
-                />
-              </div>
+          <div className='login-modal'>
+            <form className='login' onSubmit={this.handleSubmit.bind(this)}>
+              <label className='loginEmail'>Username</label>
+              <input
+                type='text'
+                className='form-control'
+                id='loginUsername'
+                aria-describedby='usernameHelp'
+                placeholder='Enter Username'
+                onChange={this.handleUsernameChange}
+                value={this.state.username}
+              />
+              <label className='loginInputPassword'>Password</label>
+              <input
+                type='password'
+                className='form-control'
+                id='loginInputPassword'
+                placeholder='Password'
+                onChange={this.handlePasswordChange}
+                value={this.state.password}
+              />
 
               <div className='login-buttons'>
                 <Button

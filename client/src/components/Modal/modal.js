@@ -9,7 +9,6 @@ function LoginModal(props) {
   return (
     <Modal
       {...props}
-      contentClassName="custom-modal-style"
       aria-labelledby='contained-modal-title-vcenter'
       centered
       size="md"

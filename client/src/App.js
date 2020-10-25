@@ -8,18 +8,9 @@ import Nature from './views/nature';
 import Blog from './views/blog';
 import Submit from './views/submit';
 import Search from './views/search';
-import { useAuth0 } from "@auth0/auth0-react";
 import history from "./utils/history";
-import Loading from "./components/Loading/loading";
 
 const App = () => {
-  const { isLoading, error } = useAuth0();
-  if (error) {
-    return <div>Oops... {error.message}</div>;
-  }
-  if (isLoading) {
-    return <Loading />;
-  }
 
   return (
     <Router history={history}>

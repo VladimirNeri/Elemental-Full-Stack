@@ -4,13 +4,12 @@ import routes from '../../data/routes';
 import data from '../../data/contact';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Hamburger from '../Hamburger/hamburger';
-import LoginModal from '../Modal/modal'
+import LoginModal from '../Modal/modal';
 // style
 import { Nav } from './nav.style';
 
-
 const Navbar = () => {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = React.useState(true);
 
   return (
     <Nav>
@@ -33,14 +32,29 @@ const Navbar = () => {
                 <Link to={l.path}>{l.label}</Link>
               </li>
             ))}
+          {modalShow ? (
+            <li>
+              <li className='login-btn'>
+                Logout
+                <LoginModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
+              </li>
+            </li>
+          ) : (
+            <li className='logout-btn' onClick={() => setModalShow(!modalShow)}>
+              Login
+            </li>
+          )}
 
-          <li className='login-btn' onClick={() => setModalShow(true)}>
+          {/* <li className='login-btn' onClick={() => setModalShow(true)}>
             Login
           </li>
           <LoginModal
             show={modalShow}
             onHide={() => setModalShow(false)}
-          />
+          /> */}
         </ul>
       </div>
 

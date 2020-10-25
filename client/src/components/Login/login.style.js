@@ -4,11 +4,17 @@ export const LoginStyl = styled.div`
   font-size: 14px;
   height: 240px;
 
+  .loginEmail, 
+  .loginInputPassword {
+    margin-top: 10px;
+  }
+  
   .form-control {
     border: 1px solid #ccc;
     border-radius: 4px;
     height: 40px;
     font-size: 12px; 
+    
   }
 
   .login-buttons {

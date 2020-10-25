@@ -54,16 +54,17 @@ export const Nav = styled.div`
   }
 
   .login-btn {
-    
+    min-width: 70px;
+    color: orangered; 
     &:hover {
-      color: #1e90ff;
+      
       text-decoration: none;
     }
   }
 
   .logout-btn {
-    color: orangered; 
-  
+    min-width: 70px; 
+    
   }
 
   .icons {
