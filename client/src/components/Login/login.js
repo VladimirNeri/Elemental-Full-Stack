@@ -87,13 +87,13 @@ export default class LoginUser extends Component {
         <LoginStyl>
           <div className='login-modal'>
             <form className='login' onSubmit={this.handleSubmit.bind(this)}>
-              <label className='loginEmail'>Username</label>
+              <label className='loginUsername'>Username</label>
               <input
                 type='text'
                 className='form-control'
                 id='loginUsername'
                 aria-describedby='usernameHelp'
-                placeholder='Enter Username'
+                placeholder='Username'
                 onChange={this.handleUsernameChange}
                 value={this.state.username}
               />
