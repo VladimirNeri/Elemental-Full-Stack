@@ -15,10 +15,14 @@ const postSchema = new mongoose.Schema(
       default: Date.now(),
       select: false,
     },
+    category: {
+      type: String,
+      required: [true, 'A post must have a category']
+    },
     summary: {
       type: String,
       trim: true,
-      required: [true, 'A post must have a description'],
+      required: [true, 'A post must have a description']
     },
     imageCover: {
       type: String,

@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Winter",
+    "author": "Max Graham",
+    "createdAt": [],
+    "category": "nature",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "imageCover": "cover.jpg",
+    "images": ["1.jpg", "2jpg", "3.jpg"],
+    "video": ["fall.mp4"]
+  }
+]

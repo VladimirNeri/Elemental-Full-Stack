@@ -8,6 +8,7 @@ import Nature from './views/nature';
 import Blog from './views/blog';
 import Submit from './views/submit';
 import Search from './views/search';
+import Signup from './views/signup';
 import history from "./utils/history";
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/posts' component={Blog} />
         <Route path='/submit' component={Submit} />
         <Route path='/search' component={Search} />
+        <Route path='/signup' component={Signup} />
       </Switch>
     </Router>
   );

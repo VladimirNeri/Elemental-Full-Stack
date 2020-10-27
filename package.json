@@ -13,7 +13,8 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "debug": "ndb server.js"
   },
   "author": "Vladimir Neri",
   "license": "ISC",
@@ -46,6 +47,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
+    "ndb": "^1.1.5",
     "nodemon": "^2.0.4"
   }
 }
