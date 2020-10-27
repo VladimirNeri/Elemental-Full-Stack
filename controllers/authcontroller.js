@@ -42,7 +42,7 @@ exports.loginUser = (req, res, next) => {
       });
     }
 
-    console.log(userData, 'this is the userData in users_api.js');
+    console.log(userData, 'this is the userData in authcontroller.js');
     if (
       userData.message == 'Invalid Password' ||
       userData.message == 'User not Found'
@@ -73,6 +73,8 @@ exports.signUpUser = function (req, res) {
       const newUser = new User();
 
       // set the user's local credentials
+      newUser.firstname = req.body.firstname; 
+      newUser.lastname = req.body.lastname; 
       newUser.username = req.body.username;
       newUser.email = req.body.email;
       newUser.password = newUser.generateHash(req.body.password);

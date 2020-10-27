@@ -20,4 +20,5 @@ Add exclusive content to cart for purchase.
 - PassportJs
 - Stripe
 - Disqus
+- Nodemailer
 
