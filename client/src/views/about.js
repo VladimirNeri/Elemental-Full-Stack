@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Navbar from '../components/Navbar/nav';
 import About from '../components/About/about';
 
-const Signpage= () => { 
+const AboutPage= () => { 
   return (
     <div className="container">
       <Helmet>
@@ -16,4 +16,4 @@ const Signpage= () => {
   );
 }
 
-export default Signpage;
+export default AboutPage;
