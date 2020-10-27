@@ -1,5 +1,4 @@
 import React from 'react';
-import { Auth0Provider } from '@auth0/auth0-react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,12 +18,10 @@ const Blog = () => {
       <Navbar />
       <Router>
         <Switch>
-          <Auth0Provider>
             <Route path='/posts/fall' component={Fall} />
             <Route path='/posts/summer' component={Summer} />
             <Route path='/posts/spring' component={Spring} />
             <Route path='/posts/winter' component={Winter} />
-          </Auth0Provider>
         </Switch>
       </Router>
     </div>

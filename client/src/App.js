@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Main from './views/Main';
 import About from './views/about';
@@ -9,12 +9,11 @@ import Blog from './views/blog';
 import Submit from './views/submit';
 import Search from './views/search';
 import Signup from './views/signup';
-import history from "./utils/history";
+
 
 const App = () => {
-
   return (
-    <Router history={history}>
+    <Router>
       <Switch>
         <Route exact path='/' component={Main} />
         <Route path='/about' component={About} />
