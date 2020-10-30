@@ -7,13 +7,14 @@ const postcontroller = require('../../controllers/postcontroller');
 router.post('/sub', subcontroller.create);
 
 // Auth
-router.get('/logout', authcontroller.signOutUser);
+// router.get('/logout', authcontroller.signOutUser);
 router.post('/login', authcontroller.loginUser);
-router.post('/signup', authcontroller.signUpUser);
+router.post('/signup', authcontroller.signUp);
+router.get('/logout', authcontroller.logout);
 
 // Posts
-router.get('/posts', postcontroller.getAll);
-router.get('/posts', postcontroller.getOne);
-router.post('/post', postcontroller.createOne);
+router.get('/post/getall', postcontroller.getAll);
+router.get('/post/getone/:id', postcontroller.getOne);
+router.post('/post/createone', postcontroller.createOne);
 
 module.exports = router;

@@ -6,7 +6,7 @@ const About = () => {
   return (
     <AboutStyl>
       <header>
-        <div>el·​e·​ment | \ ˈe-lə-mənt</div>
+        <div>el·​e·​men·​tal | \ ˈe-lə-ˈmen-tᵊl</div>
         <div>
           : any of the four substances air, water, fire, and earth formerly
           believed to compose the physical universe

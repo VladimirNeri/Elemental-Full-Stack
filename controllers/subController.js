@@ -1,6 +1,7 @@
 const Subscriber = require('../models/submodel');
+const catchAsync = require('./../utils/catchAsync');
 
-exports.create = async (req, res) => {
+exports.create = catchAsync(async (req, res) => {
   try {
     const Subscribers = await Subscriber.create(req.body);
     res.status(201).json({
@@ -15,6 +16,6 @@ exports.create = async (req, res) => {
       message: err,
     });
   }
-};
+});
 
 

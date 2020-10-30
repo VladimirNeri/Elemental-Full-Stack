@@ -1,12 +1,38 @@
 [
   {
-    "title": "Winter",
-    "author": "Max Graham",
-    "createdAt": [],
+    "title": "Fall",
+    "author": "Mistress Barbara",
     "category": "nature",
     "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "imageCover": "cover.jpg",
-    "images": ["1.jpg", "2jpg", "3.jpg"],
+    "imageCover": "23.jpg",
+    "images": ["1.jpg", "10.jpg", "24.jpg", "3.jpg"],
     "video": ["fall.mp4"]
+  },
+  {
+    "title": "Winter",
+    "author": "Loki",
+    "category": "nature",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "imageCover": "9.jpg",
+    "images": ["9.jpg", "14.jpg", "13jpg", "3.jpg"],
+    "video": ["winter.mp4"]
+  },
+  {
+    "title": "Spring",
+    "author": "Max Graham",
+    "category": "nature",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "imageCover": "18.jpg",
+    "images": ["18.jpg", "19.jpg", "20.jpg"],
+    "video": ["spring.mp4"]
+  },
+  {
+    "title": "Summer",
+    "author": "Tiffany Tatum",
+    "category": "nature",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "imageCover": "22.jpg",
+    "images": ["15.jpg", "16.jpg", "17.jpg", "21.jpg"],
+    "video": ["summer.mp4"]
   }
 ]
