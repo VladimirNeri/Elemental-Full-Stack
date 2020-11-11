@@ -1,6 +1,6 @@
 import React from 'react';
 import Registration from './registration';
-import PaymentForm from './paymentform';
+
 import { SignupStyl } from './signup.style'; 
 
 const signup = () => {
@@ -9,9 +9,6 @@ const signup = () => {
     <div className='signup-container'>
       <div className='signup-registration'>
         <Registration />
-      </div>
-      <div className='signup-payment'>
-        <PaymentForm />
       </div>
     </div>
     </SignupStyl>

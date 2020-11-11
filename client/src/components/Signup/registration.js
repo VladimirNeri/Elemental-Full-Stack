@@ -103,7 +103,7 @@ function Registration(props) {
               onChange={(e) => setRegPasswordConfirm(e.target.value)}
             />
           
-            <button type='submit' className='btn btn-admin' onClick={register}>
+            <button type='submit' className='subscribe-btn' onClick={register}>
               Subscribe
             </button>
           </form>
