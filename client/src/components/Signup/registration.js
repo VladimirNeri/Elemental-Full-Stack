@@ -28,13 +28,6 @@ function Registration(props) {
       url: '/api/signup',
     }).then((response) => {
       console.log('react', response.data);
-      if (response.data === 'Already exists') {
-        alert(
-          'There is already an account associated with this email. Please contact the site administators.'
-        );
-      } else {
-        alert('You are now registered. Welcome!');
-      }
     });
   };
 
@@ -46,7 +39,6 @@ function Registration(props) {
         </div>
         <div className='card-body'>
           <form id='registration'>
-            <label htmlFor='firstname'>First Name</label>
             <input
               type='text'
               className='form-control'
@@ -55,7 +47,6 @@ function Registration(props) {
               onChange={(e) => setRegFirst(e.target.value)}
             />
 
-            <label htmlFor='lastname'>Last Name</label>
             <input
               type='text'
               className='form-control'
@@ -64,7 +55,6 @@ function Registration(props) {
               onChange={(e) => setRegLast(e.target.value)}
             />
 
-            <label htmlFor='username'>Username</label>
             <input
               type='text'
               className='form-control'
@@ -73,7 +63,6 @@ function Registration(props) {
               onChange={(e) => setRegUsername(e.target.value)}
             />
 
-            <label htmlFor='email'>Email</label>
             <input
               name='email'
               type='email'
@@ -83,7 +72,6 @@ function Registration(props) {
               onChange={(e) => setRegEmail(e.target.value)}
             />
 
-            <label htmlFor='password'>Choose a Password</label>
             <input
               name='password'
               type='password'
@@ -93,7 +81,6 @@ function Registration(props) {
               onChange={(e) => setRegPassword(e.target.value)}
             />
 
-            <label htmlFor='passwordconfirm'>Password Confirm</label>
             <input
               name='password2'
               type='password'
@@ -102,9 +89,9 @@ function Registration(props) {
               placeholder='Please confirm your Password'
               onChange={(e) => setRegPasswordConfirm(e.target.value)}
             />
-          
-            <button type='submit' className='subscribe-btn' onClick={register}>
-              Subscribe
+
+            <button type='submit' className='btn' onClick={register}>
+              Join Now!
             </button>
           </form>
         </div>
