@@ -1,7 +1,6 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const catchAsync = require('../utils/catchAsync');
 
-
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
   // 1) The price ID of the subscription the customer is signing up for
   //    this value is passed from your frontend.
