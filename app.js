@@ -22,7 +22,7 @@ app.use((req, res, next) => {
   next();
 });
 // 3) ROUTES
-app.use(routes);
+app.use('/api', routes);
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find the ${req.originalUrl} on this server`, 404));
 });
