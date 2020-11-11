@@ -23,10 +23,10 @@ app.use((req, res, next) => {
 });
 // 3) ROUTES
 app.use(routes);
-app.all('*', (req, res, next) => {
-  next(new AppError(`Can't find the ${req.originalUrl} on this server`, 404));
-});
-app.use(globalErrorHandler);
+// app.all('*', (req, res, next) => {
+//   next(new AppError(`Can't find the ${req.originalUrl} on this server`, 404));
+// });
+// app.use(globalErrorHandler);
 
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
