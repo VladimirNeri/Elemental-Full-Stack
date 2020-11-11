@@ -19,5 +19,5 @@ router.post('/post/createone', postcontroller.createOne);
 router.get('/checkout-session/', bookingcontroller.getCheckoutSession);
 
 // Subscribe to Newsletter
-router.post('/sub', subcontroller.create);
+// router.post('/sub', subcontroller.create);
 module.exports = router;

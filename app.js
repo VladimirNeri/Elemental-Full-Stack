@@ -7,6 +7,24 @@ dotenv.config({ path: './config.env' });
 const bodyParser = require('body-parser');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
+const mongoose = require('mongoose');
+const router = express.Router()
+const subSchema = new mongoose.Schema({
+  firstname: {
+    type: String, 
+    required: true
+  },
+  lastname: {
+    type: String, 
+    required: true
+  }, 
+  email: {
+    type: String, 
+    unique: true,
+    required: [true, 'You must have an email']
+  }
+});
+const Subscriber = mongoose.model('Subscribers', subSchema); 
 
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
@@ -23,6 +41,20 @@ app.use((req, res, next) => {
 });
 // 3) ROUTES
 app.use('/api', routes);
+router.post('/sub', async (req, res) => {
+  const Subscribers = await Subscriber.create({
+    firstname: req.body.firstname,
+    lastname: req.body.lastname,
+    email: req.body.email,
+  });
+  res.status(201).json({
+    status: 'success',
+    data: {
+      Subscribers,
+    },
+  });
+});
+
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find the ${req.originalUrl} on this server`, 404));
 });
@@ -33,3 +65,5 @@ app.use('/', (req, res) => {
 });
 
 module.exports = app;
+
+
