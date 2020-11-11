@@ -3,7 +3,8 @@ const catchAsync = require('../utils/catchAsync');
 
 
 exports.getCheckoutSession = catchAsync(async (req, res, next) => {
-  // 1) Get the currently booked tour
+  // 1) The price ID of the subscription the customer is signing up for
+  //    this value is passed from your frontend.
   const { priceId } = req.body; 
    console.log(priceId);
 
