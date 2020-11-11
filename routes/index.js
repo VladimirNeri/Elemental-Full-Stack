@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const subcontroller = require('../controllers/subcontroller');
+// const subcontroller = require('../controllers/subcontroller');
 const authcontroller = require('../controllers/authcontroller');
 const postcontroller = require('../controllers/postcontroller');
 const bookingcontroller = require('../controllers/bookingcontroller');
