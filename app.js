@@ -5,8 +5,8 @@ const path = require('path');
 const dotenv = require('dotenv');
 dotenv.config({ path: './config.env' });
 const bodyParser = require('body-parser');
-const AppError = require('./utils/appError');
-const globalErrorHandler = require('./controllers/errorController');
+// const AppError = require('./utils/appError');
+// const globalErrorHandler = require('./controllers/errorController');
 const mongoose = require('mongoose');
 const router = express.Router()
 const subSchema = new mongoose.Schema({
@@ -55,10 +55,10 @@ router.post('/sub', async (req, res) => {
   });
 });
 
-app.all('*', (req, res, next) => {
-  next(new AppError(`Can't find the ${req.originalUrl} on this server`, 404));
-});
-app.use(globalErrorHandler);
+// app.all('*', (req, res, next) => {
+//   next(new AppError(`Can't find the ${req.originalUrl} on this server`, 404));
+// });
+// app.use(globalErrorHandler);
 
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './client/build/index.html'));
