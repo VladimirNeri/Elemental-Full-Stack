@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const slugify = require('slugify');
+const imgPath = '../images'
 
 const postSchema = new mongoose.Schema(
   {

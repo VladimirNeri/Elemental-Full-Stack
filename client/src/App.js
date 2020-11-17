@@ -9,7 +9,7 @@ import Blog from './views/blog';
 import Submit from './views/submit';
 import Search from './views/search';
 import Signup from './views/signup';
-
+import Payment from './views/stripe';
 
 const App = () => {
   return (
@@ -23,6 +23,7 @@ const App = () => {
         <Route path='/submit' component={Submit} />
         <Route path='/search' component={Search} />
         <Route path='/signup' component={Signup} />
+        <Route path='/payment' component={Payment} />
       </Switch>
     </Router>
   );

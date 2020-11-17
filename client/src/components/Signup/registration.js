@@ -29,6 +29,7 @@ function Registration(props) {
     }).then((response) => {
       console.log('react', response.data);
     });
+    
   };
 
   return (
