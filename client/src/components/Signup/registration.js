@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-// import { Redirect } from 'react-router-dom';
 import Axios from 'axios';
 
-//component for registration on admin page, validates someone has been invited or has already been invited
 function Registration(props) {
   const [regFirst, setRegFirst] = useState('');
   const [regLast, setRegLast] = useState('');
@@ -29,7 +27,6 @@ function Registration(props) {
     }).then((response) => {
       console.log('react', response.data);
     });
-    
   };
 
   return (
@@ -91,9 +88,8 @@ function Registration(props) {
               onChange={(e) => setRegPasswordConfirm(e.target.value)}
             />
 
-            <button type='submit' className='btn' onClick={register}>
-              Join Now!
-            </button>
+            <button type='submit' className='btn' onClick={register}>Join Now!</button>
+      
           </form>
         </div>
       </div>
