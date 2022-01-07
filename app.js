@@ -15,12 +15,12 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false }));
 app.use((req, res, next) => {
   if (req.originalUrl === '/webhook') {
     next();
   } else {
-    bodyParser.json()(req, res, next);
+    express.json()(req, res, next);
   }
 });
 
